@@ -1,0 +1,312 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins"; 
+}
+body{
+    width: 100%;
+}
+p{
+    font-size: 16px;
+    color:#2F4E09 ;
+    
+}
+/* header styling start */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px; 
+  }
+    
+    .navbar-container {
+        width: 100%;
+        background-color: white;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    
+   
+    }
+      
+.logo {
+       width: 100px; 
+        height: auto;  
+        position: absolute;
+        top: 5px;
+        left: 40px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0; 
+}
+.navbar li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0 45px;
+    list-style: none;
+    position: relative;
+    top: 10px;
+    right: 10px; 
+}
+.navbar li  a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color:#2F4E09;
+    transition: 0.3s ease;
+}
+.navbar li  a:hover,
+.navbar li  a.active{
+    color: #EB292F;
+}
+.navbar li  a.active::after,
+.navbar li  a :hover ::after
+{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #EB292F;
+    position: absolute;
+    bottom: -10px;
+    left: 50%; 
+    transform: translateX(-50%);
+
+}
+
+/* Define the animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the navbar links */
+.navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2F4E09;
+    transition: 0.3s ease;
+    animation: slideIn 0.3s forwards;
+}
+
+/* Change the color of the link when hovered */
+.navbar li a:hover {
+    color: #EB292F;
+}
+@media(max-width:799px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+    }
+    .navbar li {
+        margin-bottom: 25px;
+    }
+}
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 50px;
+    position: relative;
+}
+
+.hero-content {
+    border-radius: 10px;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+    .hero-image {
+        margin-top: 20px;
+    }
+} */
+.footer {
+    background-color: #2F4E09;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+.footer-content {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo h3 {
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: auto;
+}
+.footer-social{
+    font-weight: 700;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    margin: 0 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.footer-links ul li a:hover {
+    color: #EB292F;
+}
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+@media(max-width:768px){
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo,
+    .footer-links,
+    .footer-social{
+        margin-bottom: 20px;
+    }
+    .footer-links ul,
+    .footer-social ul{
+        flex-direction: column;
+        align-items: center;
+    } */
+    .footer-links ul li,
+    .footer-social ul li{
+        margin: 10px 0;
+    }
+    
+}
+.products {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.products h2 {
+    text-align: center;
+    font-size: 45px;
+    color: #EB292F;
+    margin-bottom: 20px;
+}
+ .pro-container{
+    width: 23%;
+    min-width: 250px;
+    padding: 20px;
+    padding-right: 0;
+    display: flex;
+    display: inline-block;
+    box-shadow: 30px 30px 30px rgba(48, 47, 47, 0.2);
+    margin: 50px;
+    cursor: pointer;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+ }
+.pro-container img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+.card-content{
+    text-align: center;
+}
+.card-content button{
+    background-color: #2F4E09;
+    color:white;
+    padding: 5px 10px;
+    border: 2px solid  #2F4E09 ;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+} 
